@@ -8,9 +8,9 @@ const COMMUNITY_CHANNEL_ID = -1002298227994;
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  const username = msg.from.username
-    ? `@${msg.from.username}`
-    : `${msg.from.first_name || ''} ${msg.from.last_name || ''}`.trim();
+  const username = (msg.from.first_name || msg.from.last_name)
+    ? `${msg.from.first_name || ''} ${msg.from.last_name || ''}`.trim()
+    : `@${msg.from.username}`;
 
   if (chatId === COMMUNITY_CHANNEL_ID || msg.chat.type === 'private') {
     bot.sendMessage(
