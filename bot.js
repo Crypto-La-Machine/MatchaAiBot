@@ -15,7 +15,7 @@ bot.onText(/\/start/, (msg) => {
   if (chatId === COMMUNITY_CHANNEL_ID || msg.chat.type === 'private') {
     bot.sendMessage(
       chatId,
-      `Welcome ${username}!\n\nMatcha Bot is a community-engaging chatbot focused on meme coins that interacts with MatchaAI token holders, answering questions on trending topics, providing market analysis, and notifying users about market shifts based on sentiment scores.\n\nStay cool, stay ahead, stay $MATCHA 🍵`,
+      `Welcome ${username}!\n\nMatcha Bot is a community-engaging chatbot focused on meme coins that interacts with Matcha AI token holders, answering questions on trending topics, providing market analysis, and notifying users about market shifts based on sentiment scores.\n\nStay cool, stay ahead, stay $MATCHA 🍵`,
       {
         reply_markup: {
           inline_keyboard: [
